@@ -1,4 +1,4 @@
-module mult2_to_1_5bit(i0, i1, s, out);
+module mult2_to_1_32bit(i0, i1, s, out);
 input [31:0] i0, i1;
 input s;
 output [31:0] out;

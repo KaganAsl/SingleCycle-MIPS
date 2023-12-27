@@ -11,7 +11,7 @@ begin
 	begin
 		if(~(f3 | f2 | f1 | f0))
 		out = 3'b010;
-		if(f3 & f2 & ~f1 & f0)
+		if(~f3 & ~f2 & f1 & ~f0)
 		out = 3'b110;
 		if(f3 & ~f2 & f1 & f0)
 		out = 3'b000;

@@ -7,7 +7,7 @@ wire r_format, lw, sw, beq;
 assign r_format = ~(| in);
 assign lw = in[5] & (~in[4]) & (~in[3]) & (~in[2]) & in[1] & in[0];
 assign sw = in[5] & (~in[4]) & in[3] & (~in[2]) & in[1] & in[0];
-assign lw = (~in[5]) & (~in[4]) & (~in[3]) & in[2] & (~in[1]) & (~in[0]);
+assign beq = (~in[5]) & (~in[4]) & (~in[3]) & in[2] & (~in[1]) & (~in[0]);
 assign reg_dest = r_format;
 assign branch = beq;
 assign mem_read = lw;

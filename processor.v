@@ -59,9 +59,9 @@ end
 
 initial
 begin
-	$readmemh("D:\\Uni\\311\\Lab\\MIPS_Processor\\init.dat",inst_mem);
-	$readmemh("D:\\Uni\\311\\Lab\\MIPS_Processor\\initdata.dat",data_mem);
-	$readmemh("D:\\Uni\\311\\Lab\\MIPS_Processor\\initreg.dat",register_file);
+	$readmemh("D:\\Uni\\311\\Lab\\MIPS_Processor\\instruction_memory.dat",inst_mem);
+	$readmemh("D:\\Uni\\311\\Lab\\MIPS_Processor\\data_memory.dat",data_mem);
+	$readmemh("D:\\Uni\\311\\Lab\\MIPS_Processor\\registers.dat",register_file);
 end
 
 

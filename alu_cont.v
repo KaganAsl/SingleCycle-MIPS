@@ -1,7 +1,7 @@
 module alu_cont(alu_op1, alu_op0, f_bits, out);
 input alu_op1, alu_op0;
 input [5:0] f_bits;
-output reg [2:0] out;
+output reg [3:0] out;
 always @(alu_op1 or alu_op0 or f_bits)
 begin
 	if(~(alu_op1 | alu_op0))

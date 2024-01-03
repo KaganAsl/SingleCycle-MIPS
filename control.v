@@ -14,9 +14,9 @@ assign sw = in[5] & ~in[4] & in[3] & ~in[2] & in[1] & in[0];
 assign addi = ~in[5] & ~in[4] & in[3] & ~in[2] & ~in[1] & ~in[0];
 assign j = ~in[5] & ~in[4] & ~in[3] & ~in[2] & in[1] & ~in[0];
 assign jal = ~in[5] & ~in[4] & ~in[3] & ~in[2] & in[1] & in[0];
-assign jr = ~(|funct[5:4]) & funct[3] & ~(|funct[2:0]);
+assign jr = r_format & ~(|funct[5:4]) & funct[3] & ~(|funct[2:0]);
 assign beq = ~in[5] & ~in[4] & ~in[3] & in[2] & ~in[1] & ~in[0];
-assign beq = ~in[5] & ~in[4] & ~in[3] & in[2] & ~in[1] & in[0];
+assign bne = ~in[5] & ~in[4] & ~in[3] & in[2] & ~in[1] & in[0];
 
 assign reg_dest = r_format;
 assign jump = j | jal;

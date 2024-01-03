@@ -23,8 +23,8 @@ reg [31:0] register_file[0:31];
 wire [31:0] data_1, data_2;
 
 // Mux outs
-wire [4:0] mux_reg_dest;
-wire [31:0] mux_pc_out, mux_alu_src, mux_to_reg, mux_jump_out, mux_jr_out, mux_jal_data_out, mux_jal_address_out;
+wire [4:0] mux_reg_dest, mux_jal_address_out;
+wire [31:0] mux_pc_out, mux_alu_src, mux_to_reg, mux_jump_out, mux_jr_out, mux_jal_data_out;
 wire pc_mux_select, branch_eq_select, branch_not_eq_select;
 
 // Alu
@@ -55,7 +55,7 @@ wire [31:0] jump_address;
 initial
 begin
 	pc=0;
-	#400 $finish;
+	#620 $finish;
 end
 
 initial
@@ -137,7 +137,7 @@ mult2_to_1_32bit mux6(alu_result, read_data, mem_to_reg, mux_to_reg);
 mult2_to_1_32bit mux7(mux_to_reg, pc_plus_4_out, j_and_link, mux_jal_data_out);
 
 // Jal address
-mult2_to_1_32bit mux8(mux_reg_dest, 31'hffffffff, j_and_link, mux_jal_address_out);
+mult2_to_1_5bit mux8(mux_reg_dest, 5'b11111, j_and_link, mux_jal_address_out);
 
 // Register write
 always @(posedge clk)

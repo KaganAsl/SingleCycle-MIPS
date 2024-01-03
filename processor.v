@@ -66,9 +66,9 @@ end
 
 initial
 begin
-	$readmemh("instruction_memory.dat",inst_mem);
-	$readmemh("data_memory.dat",data_mem);
-	$readmemh("registers.dat",register_file);
+	$readmemh("Data/instruction_memory.dat",inst_mem);
+	$readmemh("Data/data_memory.dat",data_mem);
+	$readmemh("Data/registers.dat",register_file);
 end
 
 

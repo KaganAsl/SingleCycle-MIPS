@@ -1,9 +1,9 @@
-module control(in, funct, reg_dest, jump, j_and_link, j_reg, branch_eq, branc_not_eq, mem_read,
+module control(in, funct, reg_dest, jump, j_and_link, j_reg, branch_eq, branch_not_eq, mem_read,
 mem_to_reg, alu_op1, alu_op0, mem_write, alu_src, reg_write);
 
 input [5:0] in;
 input [5:0] funct;
-output reg_dest, jump, j_and_link, j_reg, branch_eq, branc_not_eq, mem_read,
+output reg_dest, jump, j_and_link, j_reg, branch_eq, branch_not_eq, mem_read,
 mem_to_reg, alu_op1, alu_op0, mem_write, alu_src, reg_write;
 
 wire r_format, lw, sw, addi, j, jal, jr, beq, bne;
